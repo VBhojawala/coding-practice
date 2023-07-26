@@ -1,6 +1,6 @@
 package twoPointers;
 
-public class validPalindrome {
+public class validPalindrome125 {
 
     public static boolean isPalindrome(String s) {
 
