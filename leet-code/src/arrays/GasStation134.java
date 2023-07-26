@@ -20,9 +20,13 @@ public class GasStation134 {
          return  position;
     }
 
+
     public static void main(String[] args) {
         int[] gas = {1,2,3,4,5};
         int[] cost = {3,4,5,1,2};
+
+        String s = "12312";
+        boolean b = s.charAt(0) != ' ';
 
         System.out.println("Can Complete Circuit ? : " + canCompleteCircuit(gas, cost));
 
