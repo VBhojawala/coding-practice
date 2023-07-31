@@ -17,7 +17,7 @@ public class InsertInterval57 {
                 if (newInterval[1] < intervals[cur][0]){
                     isInserted = true;
                     result.add(new int[]{newInterval[0], newInterval[1]});
-                    result.add(new int[]{intervals[cur][0], intervals[cur][1]});
+                    result.add(intervals[cur]);
                 }else if(intervals[cur][1]< newInterval[0]){
                     result.add(new int[]{intervals[cur][0], intervals[cur][1]});
                 }else {
