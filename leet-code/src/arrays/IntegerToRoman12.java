@@ -1,6 +1,5 @@
 package arrays;
-
-public class IntegerToRoman12 {
+    public class IntegerToRoman12 {
     public String intToRoman(int num) {
 
         String[] roman = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
