@@ -1,5 +1,3 @@
-package javaDataStructures;
-
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
