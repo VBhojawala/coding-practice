@@ -1,22 +1,24 @@
 package trie;
 
 
-import trie.trie.Trie;
-
 public class DesignAddAndSearchWordDS211 {
 
-    private trie.trie.Trie trie;
+    class Trie {
+        public Trie[] next = new Trie[26];
+        public boolean isEnd;
+    }
+    private Trie trie;
 
     public DesignAddAndSearchWordDS211(){
-        trie = new trie.trie.Trie();
+        trie = new Trie();
     }
 
     public void addWord(String word) {
-        trie.trie.Trie node = trie;
+        Trie node = trie;
         for (char c : word.toCharArray()){
             int index = c -'a';
             if(node.next[index] == null)
-                node.next[index] = new trie.trie.Trie();
+                node.next[index] = new Trie();
             node = node.next[index];
         }
         node.isEnd = true;
@@ -26,7 +28,7 @@ public class DesignAddAndSearchWordDS211 {
         return search(word, trie);
     }
 
-    private boolean search(String word, trie.trie.Trie node){
+    private boolean search(String word, Trie node){
         for (int i=0; i < word.length(); i++){
             char c = word.charAt(i);
             int index = c - 'a';

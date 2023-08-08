@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-class Trie {
-    Trie[] next = new Trie[26];
-    int wordIndex =-1;
-}
+
 public class WordSearchII212 {
+    static class Trie {
+        Trie[] next = new Trie[26];
+        int wordIndex =-1;
+    }
     private static Trie trie = new Trie();
     private static int m, n;
     private  static  char[][] board;
