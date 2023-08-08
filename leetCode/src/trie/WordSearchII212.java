@@ -36,7 +36,6 @@ public class WordSearchII212 {
 
         return result;
 
-
     }
 
     public static void dfs(int r, int c, Trie node){
