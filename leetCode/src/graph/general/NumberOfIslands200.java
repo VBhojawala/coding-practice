@@ -14,7 +14,6 @@ public class NumberOfIslands200 {
                    dfs(i,j);
                    count++;
                }
-
            }
        }
        return count;
