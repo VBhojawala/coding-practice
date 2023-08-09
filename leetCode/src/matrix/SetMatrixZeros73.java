@@ -1,4 +1,4 @@
-package Matrix;
+package matrix;
 
 public class SetMatrixZeros73 {
     public void setZeroes(int[][] matrix) {

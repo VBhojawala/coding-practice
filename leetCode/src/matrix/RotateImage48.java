@@ -1,4 +1,4 @@
-package Matrix;
+package matrix;
 
 public class RotateImage48 {
     public static void rotate(int[][] matrix) {

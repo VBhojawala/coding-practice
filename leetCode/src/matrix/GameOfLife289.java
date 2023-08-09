@@ -1,4 +1,4 @@
-package Matrix;
+package matrix;
 
 public class GameOfLife289 {
     public void gameOfLife(int[][] board) {

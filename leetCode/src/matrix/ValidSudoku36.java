@@ -1,4 +1,4 @@
-package Matrix;
+package matrix;
 
 public class ValidSudoku36 {
     public boolean isValidSudoku(char[][] board) {
