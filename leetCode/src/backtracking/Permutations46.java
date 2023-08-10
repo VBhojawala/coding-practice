@@ -18,10 +18,12 @@ public class Permutations46 {
     }
 
     private void dfs(int i){
+
         if (i== nums.length){
             result.add(new ArrayList<>(temp));
             return;
         }
+
         for (int j=0;j< nums.length; j++){
             if(!visited[j]){
                 visited[j]=true;
