@@ -1,7 +1,7 @@
 package math;
 
 public class PowXN50 {
-    public double myPow(double x, long n) {
+    public double myPow(double x, int n) {
         return  n < 0 ? 1.0 / dac(x,Math.abs(n)) : dac(x,n);
     }
 
