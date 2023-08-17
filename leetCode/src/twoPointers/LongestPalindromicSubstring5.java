@@ -1,6 +1,6 @@
 package twoPointers;
 
-public class LongestPalindromicSubstring {
+public class LongestPalindromicSubstring5 {
 
     int n;
     String s;
@@ -29,7 +29,7 @@ public class LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        LongestPalindromicSubstring prog = new LongestPalindromicSubstring();
+        LongestPalindromicSubstring5 prog = new LongestPalindromicSubstring5();
         System.out.println(prog.longestPalindrome("babad"));
     }
 }
