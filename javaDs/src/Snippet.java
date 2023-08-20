@@ -26,5 +26,12 @@ public class Snippet {
         // Sort array and return copy
         int[] queries = new int[5];
         IntStream.of(queries).sorted().toArray();
+
+        // BitWise
+        // n & 1   ==> get Last Digit
+        // n >>> 1 ==> unsigned right shift
+        // n >>    ==> Signed rightShift
+        // n & n-1 ==> remove 1 binary from digit
+
     }
 }
