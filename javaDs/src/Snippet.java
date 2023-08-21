@@ -33,5 +33,8 @@ public class Snippet {
         // n >>    ==> Signed rightShift
         // n & n-1 ==> remove 1 binary from digit
 
+        // Positive Inf
+        final int INF = 0x3f3f3f3f;
+
     }
 }
