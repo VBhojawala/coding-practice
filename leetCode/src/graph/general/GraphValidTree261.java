@@ -2,7 +2,7 @@ package graph.general;
 
 import java.util.*;
 
-public class GraphValidTree178 {
+public class GraphValidTree261 {
 
     Map<Integer, List<Integer>> adj;
     Set<Integer> visited;
@@ -43,7 +43,7 @@ public class GraphValidTree178 {
     }
 
     public static void main(String[] args) {
-        GraphValidTree178 prog = new GraphValidTree178();
+        GraphValidTree261 prog = new GraphValidTree261();
         int[][] edges = new int[][] {{0, 1}, {0, 2}, {0, 3}, {1, 4}};
         System.out.println(prog.validTree(5,edges));
         edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {1, 3}, {1, 4}} ;
