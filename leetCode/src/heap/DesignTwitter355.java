@@ -26,25 +26,20 @@ public class DesignTwitter355 {
 
     public void postTweet(int userId, int tweetId) {
         time++;
-        if (!followersMap.containsKey(userId))
-            followersMap.computeIfAbsent(userId, e-> new HashSet<>()).add(userId);
         userTweetMap.computeIfAbsent(userId, t->new ArrayList<>()).add(new Tweet(tweetId, -time));
     }
 
     public List<Integer> getNewsFeed(int userId) {
-        if (!followersMap.containsKey(userId))
-            followersMap.computeIfAbsent(userId, e-> new HashSet<>()).add(userId);
-        PriorityQueue<Tweet> maxHeap = new PriorityQueue<>(Comparator.comparingInt(t->t.time));
         List<Integer> tweets = new ArrayList<>();
         PriorityQueue<int[]> latestTweet = new PriorityQueue<>(Comparator.comparing(a->a[0]));
-        for(int user: followersMap.getOrDefault(userId, new HashSet<>())){
-
+        Set<Integer> followers = followersMap.getOrDefault(userId, new HashSet<>());
+        followers.add(userId);
+        for(int user: followers){
             if (!userTweetMap.containsKey(user) || userTweetMap.get(user).isEmpty())
                 continue;
             Tweet lastTweet =userTweetMap.get(user).get(userTweetMap.get(user).size() -1);
             latestTweet.offer(new int[]{lastTweet.time, lastTweet.tweetId, user, userTweetMap.get(user).size()-1});
         }
-
         while (!latestTweet.isEmpty() &&   tweets.size() < k){
             int[] mostRecent = latestTweet.poll();
             tweets.add(mostRecent[1]);
@@ -57,11 +52,7 @@ public class DesignTwitter355 {
     }
 
     public void follow(int followerId, int followeeId) {
-        if (!followersMap.containsKey(followerId)){
-            followersMap.put(followerId, new HashSet<>());
-            followersMap.get(followerId).add(followerId);
-        }
-        followersMap.get(followerId).add(followeeId);
+        followersMap.computeIfAbsent(followerId, e-> new HashSet<>()).add(followeeId);
     }
 
     public void unfollow(int followerId, int followeeId) {
@@ -83,6 +74,13 @@ public class DesignTwitter355 {
         prog.unfollow(1,2);
         System.out.println(prog.getNewsFeed(1));
         System.out.println(prog.getNewsFeed(2));
+        //[5]
+        //[6, 5]
+        //[6, 5]
+        //[6, 5]
+        //[6]
+        //[5]
+        //[6]
     }
 
 }
