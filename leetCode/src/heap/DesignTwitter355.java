@@ -26,6 +26,8 @@ public class DesignTwitter355 {
 
     public void postTweet(int userId, int tweetId) {
         time++;
+        if (!followersMap.containsKey(userId))
+            followersMap.computeIfAbsent(userId, e-> new HashSet<>()).add(userId);
         userTweetMap.computeIfAbsent(userId, t->new ArrayList<>()).add(new Tweet(tweetId, -time));
     }
 
