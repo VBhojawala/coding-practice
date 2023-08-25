@@ -14,7 +14,6 @@ public class ValidateBinarySearchTree98 {
 
         if(prev !=null && prev >= root.val)
             return false;
-
         prev = root.val;
 
         if (!isValidBST(root.right))
