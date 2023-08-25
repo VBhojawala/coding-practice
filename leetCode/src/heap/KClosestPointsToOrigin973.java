@@ -1,15 +1,21 @@
 package heap;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class KClosestPointsToOrigin973 {
     public int[][] kClosest(int[][] points, int k) {
-        Arrays.sort(points, (a,b)->{
-            int dx = a[0] * a[0] + a[1] * a[1];
-            int dy = b[0] * b[0] + b[1] * b[1];
-            return dx -dy;
-        });
-        return Arrays.copyOfRange(points, 0, k);
+        PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a->a[0]));
+        for (int point[] : points)
+            minHeap.offer(new int[]{point[0]* point[0] + point[1]*point[1], point[0], point[1]});
+        int[][] result = new int[k][2];
+        for (int i=0; i<k;i++){
+            int[] point = minHeap.poll();
+            result[i][0] = point[1];
+            result[i][1] = point[2];
+        }
+        return result;
     }
 
     public static void main(String[] args) {
