@@ -13,7 +13,6 @@ public class TimeBasedKeyValueStore981 {
 
         public Value(String value, int timestamp) {
             this.value = value;
-
             this.timestamp = timestamp;
         }
     }
