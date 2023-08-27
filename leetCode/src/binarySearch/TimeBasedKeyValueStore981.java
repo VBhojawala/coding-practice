@@ -45,7 +45,6 @@ public class TimeBasedKeyValueStore981 {
             }else {
                right = mid -1;
             }
-
         }
         return floor == null ? "" : floor.value;
     }
