@@ -1,4 +1,4 @@
-package twoPointers;
+package slidingWindow;
 
 public class LongestRepeatingCharacterReplacement424 {
     public int characterReplacement(String s, int k) {
