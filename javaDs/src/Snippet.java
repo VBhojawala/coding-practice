@@ -36,5 +36,11 @@ public class Snippet {
         // Positive Inf
         final int INF = 0x3f3f3f3f;
 
+        // Character class
+        Character.isDigit('s');
+        Character.isLetter('s');
+        Character.isLetterOrDigit('1');
+
+
     }
 }
