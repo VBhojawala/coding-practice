@@ -35,8 +35,8 @@ public class DecodeString394 {
 
     public static void main(String[] args) {
         DecodeString394 prog = new DecodeString394();
-//        System.out.println(prog.decodeString("3[a]2[bc]"));
-//        System.out.println(prog.decodeString("3[a2[c]]"));
+        System.out.println(prog.decodeString("3[a]2[bc]"));
+        System.out.println(prog.decodeString("3[a2[c]]"));
         System.out.println(prog.decodeString("2[abc]3[cd]ef"));
     }
 
