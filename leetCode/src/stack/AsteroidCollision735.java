@@ -2,7 +2,6 @@ package stack;
 
 import java.util.Arrays;
 import java.util.Stack;
-import java.util.stream.Collectors;
 
 public class AsteroidCollision735 {
     public int[] asteroidCollision(int[] asteroids) {
