@@ -9,19 +9,12 @@ public class MinStack155 {
     public MinStack155() {
         stack = new Stack<>();
         minStack = new Stack<>();
+        minStack.push(Integer.MAX_VALUE);
     }
 
     public void push(int val) {
         stack.push(val);
-        if(minStack.isEmpty()){
-            minStack.push(val);
-        }else {
-            if(minStack.peek() < val){
-                minStack.push(minStack.peek());
-            }else{
-                minStack.push(val);
-            }
-        }
+        minStack.push(Math.min(val, minStack.peek()));
     }
 
     public void pop() {
