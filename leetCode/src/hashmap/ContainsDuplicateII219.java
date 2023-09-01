@@ -3,7 +3,7 @@ package hashmap;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ContainsDuplicate219 {
+public class ContainsDuplicateII219 {
 
     public static boolean containsNearbyDuplicate(int[] nums, int k) {
         Set<Integer> window = new HashSet<>();
