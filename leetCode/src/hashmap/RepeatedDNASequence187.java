@@ -7,13 +7,12 @@ public class RepeatedDNASequence187 {
         List<String> result = new ArrayList<>();
         if (s.length() < 10) return result;
         Map<String, Integer> seen = new HashMap<>();
-
-        for (int i=9; i <s.length();i++)
-            seen.merge(s.substring(i-9, i+1), 1, Integer::sum);
-
-        for ( Map.Entry<String , Integer> e: seen.entrySet()){
-            if (e.getValue() > 1)
-                result.add(e.getKey());
+        String pattern;
+        for (int i=9; i <s.length();i++){
+            pattern = s.substring(i-9, i+1);
+            seen.merge(pattern, 1, Integer::sum);
+            if (seen.get(pattern) == 2)
+                result.add(pattern);
         }
         return result;
     }
