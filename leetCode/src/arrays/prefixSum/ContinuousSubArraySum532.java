@@ -1,21 +1,22 @@
 package arrays.prefixSum;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class ContinuousSubArraySum532 {
     public boolean checkSubarraySum(int[] nums, int k) {
-        Set<Integer> modSet = new HashSet<>();
-        int curSum=0, prevRem=0, curRem=0;
-        for (int num : nums){
-            curSum = prevRem + num;
-            curRem = curSum % k;
-            if (modSet.contains(curRem))
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0,-1);
+        int sum =0, rem;
+        for (int i=0;i<nums.length;i++){
+            sum += nums[i];
+            rem = sum % k;
+
+            if (map.containsKey(rem) && (i - map.get(rem)) > 1 )
                 return true;
-            modSet.add(prevRem);
-            prevRem = curRem;
+
+            if (!map.containsKey(rem))
+                map.put(rem, i);
         }
         return false;
     }
