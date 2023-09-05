@@ -1,12 +1,14 @@
-package hashmap;
+package hashmap.rollingHash;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class RepeatedDNASequence187 {
     public List<String> findRepeatedDnaSequences(String s) {
         List<String> result = new ArrayList<>();
         if (s.length() < 10) return result;
-        Map<Integer, Integer> seen = new HashMap<>();
+        Set<Integer> visited= new HashSet<>();
+        Set<Integer> repeat = new HashSet<>();
         int hash = 0, mask = (1 << 27 ) - 1;
 
         for (int i=0;i<9;i++)
@@ -14,12 +16,12 @@ public class RepeatedDNASequence187 {
 
         for (int i=9;i<s.length();i++){
             hash = (hash << 3) | getVal(s.charAt(i));
-            if (seen.merge(hash, 1, Integer::sum) == 2)
-                result.add(s.substring(i-9, i+1));
+            if (!visited.add(hash))
+                repeat.add(hash);
             hash &= mask;
         }
 
-        return result;
+        return repeat.stream().map(String::valueOf).collect(Collectors.toList());
     }
 
     private int getVal(char c){

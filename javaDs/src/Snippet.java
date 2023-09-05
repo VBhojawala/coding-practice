@@ -32,6 +32,8 @@ public class Snippet {
         // n >>> 1 ==> unsigned right shift
         // n >>    ==> Signed rightShift
         // n & n-1 ==> remove 1 binary from digit
+        // Parse Binary
+        Integer.parseInt("101", 2);
 
         // Positive Inf
         final int INF = 0x3f3f3f3f;
