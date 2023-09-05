@@ -1,4 +1,4 @@
-package hashmap;
+package arrays;
 
 import java.util.*;
 import java.util.stream.Collectors;
