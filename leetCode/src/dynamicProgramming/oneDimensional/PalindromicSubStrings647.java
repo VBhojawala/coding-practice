@@ -16,6 +16,6 @@ public class PalindromicSubStrings647 {
     public static void main(String[] args) {
         PalindromicSubStrings647 prog = new PalindromicSubStrings647();
         System.out.println(prog.countSubstrings("abc"));
-//        System.out.println(prog.countSubstrings("aaa"));
+        System.out.println(prog.countSubstrings("aaa"));
     }
 }
