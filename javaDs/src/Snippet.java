@@ -43,6 +43,7 @@ public class Snippet {
         Character.isLetter('s');
         Character.isLetterOrDigit('1');
 
-
+        // MOD
+        int mod = (int) 1e9 + 7;
     }
 }
