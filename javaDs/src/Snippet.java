@@ -34,6 +34,7 @@ public class Snippet {
         // n & n-1 ==> remove 1 binary from digit
         // Parse Binary
         Integer.parseInt("101", 2);
+        Integer.toBinaryString(10);
 
         // Positive Inf
         final int INF = 0x3f3f3f3f;
