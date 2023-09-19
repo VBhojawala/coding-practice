@@ -19,7 +19,7 @@ public class Permutations46 {
 
     private void dfs(int i){
 
-        if (i== nums.length){
+        if (i == nums.length){
             result.add(new ArrayList<>(temp));
             return;
         }

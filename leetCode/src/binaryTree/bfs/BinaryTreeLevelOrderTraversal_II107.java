@@ -6,7 +6,7 @@ import java.util.*;
 
 public class BinaryTreeLevelOrderTraversal_II107 {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        LinkedList<List<Integer>> result = new LinkedList<>();
+        List<List<Integer>> result = new ArrayList<>();
         if ( root == null) return  result;
         Deque<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
@@ -18,7 +18,7 @@ public class BinaryTreeLevelOrderTraversal_II107 {
                 if (node.left != null) queue.offer(node.left);
                 if (node.right != null) queue.offer(node.right);
             }
-            result.addFirst(levelNodes);
+            result.add(0,levelNodes);
         }
         return result;
     }
