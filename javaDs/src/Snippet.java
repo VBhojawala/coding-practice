@@ -17,6 +17,8 @@ public class Snippet {
         int[][] points = new int[2][2];
         Arrays.sort(points, Comparator.comparingInt(a->a[1]));
 
+        //  Arrays.sort(players, (a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]);
+
         // Max Heap (MaxPQ)
         PriorityQueue<Integer> maxPQ = new PriorityQueue<>(Comparator.reverseOrder());
 
