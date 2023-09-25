@@ -1,4 +1,4 @@
-package graph.general;
+package graph.unionFind;
 
 public class GraphValidTree261UF {
 

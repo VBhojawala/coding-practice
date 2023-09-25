@@ -1,4 +1,4 @@
-package graph.general;
+package graph.unionFind;
 
 import java.util.Arrays;
 
