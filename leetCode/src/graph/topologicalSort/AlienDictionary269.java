@@ -1,4 +1,4 @@
-package graph.general;
+package graph.topologicalSort;
 
 import java.util.*;
 

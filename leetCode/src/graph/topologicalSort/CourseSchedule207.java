@@ -1,7 +1,10 @@
-package graph.general;
+package graph.topologicalSort;
 
 import java.util.*;
 
+/**
+ *  O(V+E)
+ */
 public class CourseSchedule207 {
 
     Map<Integer, List<Integer>> graph = new HashMap<>();
