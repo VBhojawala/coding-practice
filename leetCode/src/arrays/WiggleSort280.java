@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class WiggleSort280 {
 
-    int[] nums;
-    int temp;
+    private int[] nums;
+    private int temp;
 
     public void wiggleSort(int[] nums) {
         this.nums = nums;
