@@ -1,4 +1,4 @@
-package graph.bfs;
+package graph.general;
 
 import java.lang.reflect.Array;
 import java.util.*;
