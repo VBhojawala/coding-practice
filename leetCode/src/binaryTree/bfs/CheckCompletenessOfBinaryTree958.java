@@ -10,7 +10,7 @@ public class CheckCompletenessOfBinaryTree958 {
         Deque<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
-        while (queue.peek() != null){
+        while (queue.peek() != null) {
             TreeNode node = queue.poll();
             queue.offer(node.left);
             queue.offer(node.right);
