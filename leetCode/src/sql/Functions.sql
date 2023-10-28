@@ -9,7 +9,11 @@
 # DATEDIFF(weather.recordDate, w.recordDate)
 # CONCAT(lat,'-',lon)
 # DENSE_RANK() OVER( PARTITION BY E.departmentId ORDER BY E.salary DESC)
-
+# CONCAT(STR1, STR2)
+# SUBSTRING()
+# LEFT() RIGHT()
+# GROUP_CONCAT()
+# REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode[.]com$';
 
 # MISC
 COUNT(DISTINCT subject_id)
@@ -21,4 +25,14 @@ WITH S As (SELECT person_name, SUM(weight) OVER ( ORDER BY turn) AS total FROM Q
 SUM(IF(income >= 20000 AND income <= 50000, 1,0))
 (IFNULL(IF(MOD(id,2) = 0, LAG(student) OVER(), LEAD(student) OVER()), student))
 SUM(amount) OVER (ORDER BY visited_on RANGE BETWEEN INTERVAL 6 DAY PRECEDING AND CURRENT ROW)
-
+CONCAT(UPPER(LEFT(name,1)), LOWER(SUBSTRING(name, 2)))
+DESC LIMIT 1 OFFSET 1
+GROUP_CONCAT(DISTINCT product ORDER BY product SEPARATOR ',')
+SUM(product_name = 'A')
+RANK()OVER(PARTITION BY student_id ORDER BY grade DESC, course_id)
+DATE_FORMAT(sale_date, '%Y')=2020)
+(CASE
+    WHEN operator = '>' THEN IF (A.value > B.value, 'true', 'false')
+    WHEN operator = '<' THEN IF (A.value < B.value, 'true', 'false')
+    WHEN operator = '=' THEN IF (A.value = B.value, 'true', 'false')
+    END)
