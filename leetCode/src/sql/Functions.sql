@@ -14,6 +14,7 @@
 # LEFT() RIGHT()
 # GROUP_CONCAT()
 # REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode[.]com$';
+# YEAR(order_date) MONTH() DAY()
 
 # MISC
 COUNT(DISTINCT subject_id)
