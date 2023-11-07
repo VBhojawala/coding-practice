@@ -16,7 +16,7 @@ public class WallsAndGates286 {
             this.col = col;
         }
     }
-    Queue<Room> queue;
+    private Queue<Room> queue;
     public void wallsAndGates(int[][] rooms) {
         queue = new LinkedList<>();
         int m= rooms.length, n= rooms[0].length;
@@ -28,7 +28,7 @@ public class WallsAndGates286 {
             }
         }
 
-        int[][] c = new int[][] {{0,1,},{1,0},{-1,0},{0,-1}};
+        int[][] c = new int[][] {{0,1},{1,0},{-1,0},{0,-1}};
         int x,y;
         int distance=0;
 
@@ -41,7 +41,7 @@ public class WallsAndGates286 {
                     x = cur.row + cc[0];
                     y= cur.col + cc[1];
 
-                    if(x < n && y <n && x >=0 && y >=0 && rooms[x][y] == Integer.MAX_VALUE){
+                    if(x < m && y <n && x >=0 && y >=0 && rooms[x][y] == Integer.MAX_VALUE){
                         rooms[x][y] = distance;
                         queue.offer(new Room(x,y));
                     }
