@@ -1,7 +1,6 @@
-package graph.general;
+package graph.bfs;
 
 import java.util.LinkedList;
-import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class WallsAndGates286 {
