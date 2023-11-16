@@ -12,7 +12,7 @@ public class LonelyPixelI531 {
                 {
                     rowCount[i]++;
                     colCount[j]++;
-                }
+                 }
             }
         }
 
