@@ -1,8 +1,5 @@
 package hashmap;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class PalindromePermutation266 {
     public boolean canPermutePalindrome(String s) {
         int[] charCount = new int[26];

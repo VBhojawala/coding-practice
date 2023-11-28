@@ -1,6 +1,6 @@
 package dynamicProgramming.oneDimensional;
 
-public class HouseRobber192 {
+public class HouseRobber198 {
     public int rob(int[] nums) {
 
         int prev2 = 0,prev1 = nums[0], temp;
@@ -15,7 +15,7 @@ public class HouseRobber192 {
     }
 
     public static void main(String[] args) {
-        HouseRobber192 prog = new HouseRobber192();
+        HouseRobber198 prog = new HouseRobber198();
         System.out.println(prog.rob(new int[]{1,2,3,1}));
     }
 }
